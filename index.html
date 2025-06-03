@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pulsa & Kuota Gratis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="main-container">
+    <h1>Pulsa & Kuota Gratis</h1>
+
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('pulsa', this)">Pulsa</button>
+      <button class="tab" onclick="switchTab('kuota', this)">Paket Data</button>
+    </div>
+
+    <input type="text" id="nomor" placeholder="Masukkan Nomor HP" />
+
+    <div class="providers">
+      <img src="telkomsel.jpg" alt="Telkomsel" onclick="setProvider(this, 'Telkomsel')" />
+      <img src="axis.jpg" alt="Axis" onclick="setProvider(this, 'Axis')" />
+      <img src="xl.jpg" alt="XL" onclick="setProvider(this, 'XL')" />
+      <img src="indosat.jpg" alt="Indosat" onclick="setProvider(this, 'Indosat')" />
+      <img src="tri.jpg" alt="Tri" onclick="setProvider(this, 'Tri')" />
+    </div>
+
+    <div id="pulsa" class="card-grid active">
+      <div class="card" onclick="select('Pulsa Rp5.000')">Pulsa Rp5.000</div>
+      <div class="card" onclick="select('Pulsa Rp10.000')">Pulsa Rp10.000</div>
+      <div class="card" onclick="select('Pulsa Rp20.000')">Pulsa Rp20.000</div>
+      <div class="card" onclick="select('Pulsa Rp50.000')">Pulsa Rp50.000</div>
+    </div>
+
+    <div id="kuota" class="card-grid">
+      <div class="card" onclick="select('Kuota 1GB / 1 Hari')">1GB / 1 Hari</div>
+      <div class="card" onclick="select('Kuota 3GB / 3 Hari')">3GB / 3 Hari</div>
+      <div class="card" onclick="select('Kuota 5GB / 7 Hari')">5GB / 7 Hari</div>
+      <div class="card" onclick="select('Kuota 10GB / 30 Hari')">10GB / 30 Hari</div>
+    </div>
+
+    <button id="kirim">Kirim Sekarang</button>
+
+    <div id="loading" class="hidden">⏳ Memproses...</div>
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
